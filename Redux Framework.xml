@@ -1,0 +1,72 @@
+<templateSet group="Redux Framework">
+  <template name="redux-arg-required" value="'required' =&gt; array( '$parent$', '$operation$', '$value$' ),$END$" description="Required argument, single condition" toReformat="true" toShortenFQNames="true">
+    <variable name="parent" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="operation" expression="enum(&quot;=&quot;, &quot;!=&quot;, &quot;&lt;&quot;, &quot;&lt;=&quot;, &quot;&gt;&quot;, &quot;&gt;=&quot;, &quot;contains&quot;, &quot;doesnt_contain&quot;, &quot;is_empty_or&quot;, &quot;not_empty_and&quot;)" defaultValue="equals" alwaysStopAt="true" />
+    <variable name="value" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="PHP" value="true" />
+      <option name="PHP Comment" value="true" />
+    </context>
+  </template>
+  <template name="redux-args-required-nested" value="'required' =&gt; array(&#10;&#9;array( '$parent$', '$operation$', '$value$' ),&#10;&#9;array( '$parent2$', '$operation2$', '$value2$' ),&#10;)," description="Required argument, w/ multiple nested conditions" toReformat="true" toShortenFQNames="true">
+    <variable name="parent" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="operation" expression="enum(&quot;=&quot;,&quot;!=&quot;,&quot;&lt;&quot;,&quot;&lt;=&quot;,&quot;&gt;&quot;,&quot;&gt;=&quot;, &quot;contains&quot;, &quot;doesnt_contain&quot;,&quot;is_empty_or&quot;,&quot;not_empty_and&quot;)" defaultValue="equals" alwaysStopAt="true" />
+    <variable name="value" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="parent2" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="operation2" expression="enum(&quot;=&quot;,&quot;!=&quot;,&quot;&lt;&quot;,&quot;&lt;=&quot;,&quot;&gt;&quot;,&quot;&gt;=&quot;, &quot;contains&quot;, &quot;doesnt_contain&quot;,&quot;is_empty_or&quot;,&quot;not_empty_and&quot;)" defaultValue="equals" alwaysStopAt="true" />
+    <variable name="value2" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="PHP" value="true" />
+      <option name="PHP Comment" value="true" />
+    </context>
+  </template>
+  <template name="redux-section" value="Redux::setSection( '$opt_name$', array(&#10;        'id'         =&gt; '$id$',&#10;        'title'      =&gt; __( '$title$', 'redux-framework-demo' ),&#10;        //'heading' =&gt; '',&#10;        //'subsection' =&gt; true,&#10;        'icon'       =&gt; 'el el-cogs',&#10;        'fields'     =&gt; array(&#10;&#10;        ),&#10;    )&#10;);" description="Section Declaration" toReformat="true" toShortenFQNames="true">
+    <variable name="opt_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="title" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="PHP" value="true" />
+      <option name="PHP Comment" value="true" />
+    </context>
+  </template>
+  <template name="redux-field-array" value="array(&#10;    'id'         &#9;=&gt; '$id$',&#10;    'type'     &#9;&#9;=&gt; '$type$',&#10;    'title'    &#9;&#9;=&gt; __( '$title$', 'redux-framework-demo' ),&#10;    //'subtitle' &#9;=&gt; __( '', 'redux-framework-demo' ),&#10;    //'desc'     &#9;=&gt; __( '', 'redux-framework-demo' ),&#10;    //'full_width' &#9;=&gt; true,&#10;    //'default'  &#9;&#9;=&gt; '',&#10;)," description="Field array only declaration" toReformat="true" toShortenFQNames="true">
+    <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="type" expression="enum(&quot;&quot;,&quot;ace_editor&quot;, &quot;background&quot;, &quot;border&quot;, &quot;button_set&quot;, &quot;checkbox&quot;, &quot;color&quot;, &quot;color_gradient&quot;, &quot;color_rgba&quot;, &quot;date&quot;, &quot;dimensions&quot;, &quot;divide&quot;, &quot;editor&quot;, &quot;gallery&quot;, &quot;image_select&quot;, &quot;info&quot;, &quot;link_color&quot;, &quot;media&quot;, &quot;multi_text&quot;, &quot;password&quot;, &quot;radio&quot;, &quot;raw&quot;, &quot;section&quot;, &quot;select&quot;, &quot;select_image&quot;, &quot;slider&quot;, &quot;slides&quot;, &quot;sortable&quot;, &quot;sorter&quot;, &quot;spacing&quot;, &quot;spinner&quot;, &quot;switch&quot;, &quot;text&quot;, &quot;textarea&quot;, &quot;typography&quot;)" defaultValue="" alwaysStopAt="true" />
+    <variable name="title" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="PHP" value="true" />
+      <option name="PHP Comment" value="true" />
+    </context>
+  </template>
+  <template name="redux-field" value="Redux::setField( '$opt_name$', array(&#10;        'id'         &#9;=&gt; '$id$',&#10;        'section_id'    =&gt; '$section_id$',&#10;&#9;    'type'     &#9;&#9;=&gt; '$type$',&#10;&#9;    'title'    &#9;&#9;=&gt; __( '$title$', 'redux-framework-demo' ),&#10;&#9;    //'subtitle' &#9;=&gt; __( '', 'redux-framework-demo' ),&#10;&#9;    //'desc'     &#9;=&gt; __( '', 'redux-framework-demo' ),&#10;&#9;    //'full_width' &#9;=&gt; true,&#10;&#9;    //'default'  &#9;&#9;=&gt; '',&#10;&#9;)&#10;);" description="Redux field declaration" toReformat="true" toShortenFQNames="true">
+    <variable name="opt_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="section_id" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="type" expression="enum(&quot;&quot;,&quot;ace_editor&quot;, &quot;background&quot;, &quot;border&quot;, &quot;button_set&quot;, &quot;checkbox&quot;, &quot;color&quot;, &quot;color_gradient&quot;, &quot;color_rgba&quot;, &quot;date&quot;, &quot;dimensions&quot;, &quot;divide&quot;, &quot;editor&quot;, &quot;gallery&quot;, &quot;image_select&quot;, &quot;info&quot;, &quot;link_color&quot;, &quot;media&quot;, &quot;multi_text&quot;, &quot;password&quot;, &quot;radio&quot;, &quot;raw&quot;, &quot;section&quot;, &quot;select&quot;, &quot;select_image&quot;, &quot;slider&quot;, &quot;slides&quot;, &quot;sortable&quot;, &quot;sorter&quot;, &quot;spacing&quot;, &quot;spinner&quot;, &quot;switch&quot;, &quot;text&quot;, &quot;textarea&quot;, &quot;typography&quot;)" defaultValue="" alwaysStopAt="true" />
+    <variable name="title" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="PHP" value="true" />
+      <option name="PHP Comment" value="true" />
+    </context>
+  </template>
+  <template name="redux-section-array" value="array(&#10;    'id'         =&gt; '$id$',&#10;    'title'      =&gt; __( '$title$', 'redux-framework-demo' ),&#10;    //'heading' =&gt; '',&#10;    //'subsection' =&gt; true,&#10;    'icon'       =&gt; 'el el-cogs',&#10;    'fields'     =&gt; array(&#10;&#10;    ),&#10;)," description="Section array only declaration" toReformat="true" toShortenFQNames="true">
+    <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="title" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="false" />
+      <option name="HTML" value="false" />
+      <option name="PHP" value="true" />
+      <option name="PHP Comment" value="true" />
+    </context>
+  </template>
+</templateSet>
